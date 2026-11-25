@@ -888,17 +888,18 @@
         <p>Llena el formulario y al tocar el botón se abrirá tu WhatsApp con tu cita ya escrita. Solo presiona enviar y tu solicitud llega directo a Gyna Spa, donde te confirman disponibilidad, horario y ubicación.</p>
         <ol class="book-steps">
           <li><span><strong>Elige tu servicio</strong><br />Selecciona el tratamiento que quieres o pide asesoría si no sabes cuál es para ti.</span></li>
-          <li><span><strong>Propón día y horario</strong><br />Cuéntanos qué día te queda mejor y en qué parte del día.</span></li>
+          <li><span><strong>Propón día y hora</strong><br />Elige tu hora: atendemos de 9:00 a.m. a 3:00 p.m. y de 4:00 a 8:00 p.m., con citas cada hora.</span></li>
           <li><span><strong>Envía por WhatsApp</strong><br />Tu cita llega al 442 359 3762 y te confirmamos en el mismo chat.</span></li>
         </ol>
-        <p style="margin-top:26px">¿Prefieres escribir directo?<br />
+        <p style="margin-top:26px"><strong style="color:var(--gold-2)">Horario de atención</strong><br />De 9:00 a.m. a 3:00 p.m. y de 4:00 a 8:00 p.m.<br />Citas cada hora, con cita previa.</p>
+        <p style="margin-top:18px">¿Prefieres escribir directo?<br />
           <a href="https://wa.me/524423593762?text=Hola%20Gyna%20Spa%2C%20quiero%20agendar%20una%20cita." target="_blank" rel="noopener" style="color:var(--gold-2);font-weight:500;font-size:1.1rem">WhatsApp · 442 359 3762</a>
         </p>
       </div>
 
       <form class="book-card" id="bookForm" novalidate>
         <h3>Formulario de cita</h3>
-        <p>Atención con cita previa · Querétaro</p>
+        <p>Atención con cita previa · Horario: 9:00 a.m. – 3:00 p.m. y 4:00 – 8:00 p.m. · Querétaro</p>
         <div class="form-error" id="formError" role="alert"></div>
         <div class="field">
           <label for="f-nombre">Tu nombre *</label>
@@ -951,12 +952,25 @@
             <input id="f-fecha" name="fecha" type="date" />
           </div>
           <div class="field">
-            <label for="f-horario">Horario preferido</label>
+            <label for="f-horario">Hora de tu cita</label>
             <select id="f-horario" name="horario">
-              <option value="">El que haya disponible</option>
-              <option>Mañana</option>
-              <option>Mediodía</option>
-              <option>Tarde</option>
+              <option value="">La que haya disponible</option>
+              <optgroup label="Mañana · 9 a 3">
+                <option>9:00 a.m.</option>
+                <option>10:00 a.m.</option>
+                <option>11:00 a.m.</option>
+                <option>12:00 p.m.</option>
+                <option>1:00 p.m.</option>
+                <option>2:00 p.m.</option>
+                <option>3:00 p.m.</option>
+              </optgroup>
+              <optgroup label="Tarde · 4 a 8">
+                <option>4:00 p.m.</option>
+                <option>5:00 p.m.</option>
+                <option>6:00 p.m.</option>
+                <option>7:00 p.m.</option>
+                <option>8:00 p.m.</option>
+              </optgroup>
             </select>
           </div>
         </div>
@@ -1012,8 +1026,10 @@
         </a>
       </div>
       <div>
-        <h5>Servicios</h5>
-        <p>Faciales · Masajes · Corporales<br />Aparatología · Atención personalizada<br /><br />Atención con cita previa.<br />Av. de la Luz 1500, Int. 127, Col. Puestas del Sol, C.P. 76116, Querétaro.</p>
+        <h5>Horarios</h5>
+        <p>De 9:00 a.m. a 3:00 p.m.<br />y de 4:00 a 8:00 p.m.<br />Citas cada hora, con cita previa.</p>
+        <h5 style="margin-top:26px">Servicios</h5>
+        <p>Faciales · Masajes · Corporales<br />Aparatología · Atención personalizada<br /><br />Av. de la Luz 1500, Int. 127, Col. Puestas del Sol, C.P. 76116, Querétaro.</p>
       </div>
     </div>
     <div class="foot-bottom">
@@ -1182,7 +1198,7 @@
       "Servicio: " + servicio
     ];
     if(fecha) lineas.push("Día que prefiero: " + fecha);
-    if(horario) lineas.push("Horario preferido: " + horario);
+    if(horario) lineas.push("Hora de la cita: " + horario);
     if(telefono) lineas.push("Mi teléfono: " + telefono);
     if(notas) lineas.push("Notas: " + notas);
     lineas.push("", "Quedo al pendiente de su confirmación. ¡Gracias!");
